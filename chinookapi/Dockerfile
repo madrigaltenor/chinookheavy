@@ -8,15 +8,15 @@ USER app
 FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 ARG configuration=Release
 WORKDIR /src
-COPY ["chinookapi/chinookapi.csproj", "chinookapi/"]
-RUN dotnet restore "chinookapi/chinookapi.csproj"
+COPY ["chinookapi.csproj", "."]
+RUN dotnet restore "chinookapi.csproj"
 COPY . .
 WORKDIR "/src/chinookapi"
-RUN dotnet build "chinookapi.csproj" -c $configuration -o /app/build
+RUN dotnet build "../chinookapi.csproj" -c $configuration -o /app/build
 
 FROM build AS publish
 ARG configuration=Release
-RUN dotnet publish "chinookapi.csproj" -c $configuration -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "../chinookapi.csproj" -c $configuration -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
