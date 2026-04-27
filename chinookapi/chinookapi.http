@@ -1,0 +1,6 @@
+@chinookapi_HostAddress = http://localhost:5036
+
+GET {{chinookapi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

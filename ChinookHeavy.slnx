@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="chinookapi/chinookapi.csproj" />
+  <Project Path="chinookmvc/chinookmvc.csproj" />
+</Solution>
