@@ -8,7 +8,7 @@ public class ChinookController: Controller
 {
     public async Task<ActionResult> Index()
     {
-        string apiUrl = "http://localhost:5036/Artists";
+        string apiUrl = Environment.GetEnvironmentVariable("CHINOOKAPIURL");
 
         using(var client = new HttpClient())
         {

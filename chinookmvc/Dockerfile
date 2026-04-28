@@ -9,7 +9,7 @@ FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 ARG configuration=Release
 WORKDIR /src
 COPY ["chinookmvc.csproj", "."]
-RUN dotnet restore "chinookmvc/chinookmvc.csproj"
+RUN dotnet restore "chinookmvc.csproj"
 COPY . .
 WORKDIR "/src/chinookmvc"
 RUN dotnet build "../chinookmvc.csproj" -c $configuration -o /app/build
