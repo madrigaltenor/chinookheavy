@@ -1,0 +1,12 @@
+﻿@model IEnumerable<chinookframework.Models.Artist>
+@{
+    ViewBag.Title = "Artists";
+}
+
+<h3>Artists (from Windows Container)</h3>
+<ul>
+    @foreach (var artist in Model)
+    {
+        <li>@artist.name</li>
+    }
+</ul>

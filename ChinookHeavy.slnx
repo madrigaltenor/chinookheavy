@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="chinookapi/chinookapi.csproj" />
+  <Project Path="chinookframework/chinookframework.csproj" Id="9812309c-5faf-411a-bad8-78af13fadc1d" />
   <Project Path="chinookmvc/chinookmvc.csproj" />
 </Solution>
