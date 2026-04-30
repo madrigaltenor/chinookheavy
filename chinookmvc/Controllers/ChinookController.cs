@@ -23,6 +23,10 @@ public class ChinookController: Controller
                 var table = Newtonsoft.Json.JsonConvert.DeserializeObject<System.Data.DataTable>(data);
                 return View("Index",table);
             }
+            else
+            {
+                throw new Exception(response.StatusCode + " " + response.Message);
+            }
         }
 
         return View("Index",new System.Data.DataTable());
